@@ -102,10 +102,13 @@ public class IteratorService {
 	
 	public static void printList(List<String> list) {
 	   Iterator<String> it = list.iterator();
-		 String value = "";
+		 System.out.print(" [ ");
 		 while(it.hasNext()) {
-		    value += it.next()+", ";
+		     System.out.print(it.next());
+			    if(it.hasNext()) 
+			     System.out.print(" , ");
 		 }
-		 System.out.println("[ "+value+" ]");
+		 System.out.println(" ]");
+		
 	}
 }
